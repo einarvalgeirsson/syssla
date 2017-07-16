@@ -43,8 +43,6 @@ class MainActivity : AppCompatActivity() {
         getSupportActionBar()?.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar()?.setCustomView(R.layout.abs_layout);
 
-        Realm.init(applicationContext)
-
         fab.setOnClickListener({
             intent = Intent(this, CreateChoreActivity::class.java)
             startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())

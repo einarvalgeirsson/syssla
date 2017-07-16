@@ -17,6 +17,12 @@
         <activity android:name=".CreateChoreActivity"
             android:theme="@style/AppTheme">
         </activity>
+        <activity android:name=".RegisterUserActivity"
+            android:theme="@style/AppTheme">
+        </activity>
+        <activity android:name=".RegisterPartnerActivity"
+            android:theme="@style/AppTheme">
+        </activity>
         <activity
             android:name=".SplashActivity"
             android:theme="@style/AppTheme">
