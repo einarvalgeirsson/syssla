@@ -59,3 +59,5 @@ dependencies {
     compile 'com.facebook.android:facebook-android-sdk:[4,5)'
     compile "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
 }
+
+apply plugin: 'com.google.gms.google-services'
