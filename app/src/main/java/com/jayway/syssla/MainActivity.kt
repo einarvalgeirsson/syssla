@@ -25,6 +25,7 @@ import kotlinx.android.synthetic.main.card_layout.*
 import kotlinx.android.synthetic.main.content_main.*
 import kotlinx.android.synthetic.main.fab_layout.*
 import android.view.Window.FEATURE_CONTENT_TRANSITIONS
+import com.facebook.login.LoginManager
 import com.vicpin.krealmextensions.deleteAll
 
 
@@ -41,13 +42,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
         getSupportActionBar()?.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-        getSupportActionBar()?.setCustomView(R.layout.abs_layout);
+        getSupportActionBar()?.setCustomView(R.layout.abs_layout)
 
         fab.setOnClickListener({
             intent = Intent(this, CreateChoreActivity::class.java)
             startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
         })
 
+        LoginManager.getInstance().logInWithPublishPermissions(this, listOf("publish_actions"))
         setupList()
     }
 

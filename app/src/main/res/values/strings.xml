@@ -4,4 +4,8 @@
     <string name="select_username_desc_text">Välj ett användarnamn</string>
     <string name="ok">OK</string>
     <string name="select_partner_name_desc_text">Vad har din partner för användarnamn?</string>
+    <string name="user_name_empty_warning">Användarnamnet får ej vara tomt</string>
+
+    <string name="facebook_app_id">500567910279230</string>
+    <string name="fb_login_protocol_scheme">fb500567910279230</string>
 </resources>
