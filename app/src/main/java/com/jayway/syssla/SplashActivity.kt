@@ -7,6 +7,7 @@ import android.os.Handler
 import android.support.v7.app.AppCompatActivity
 import android.util.Base64
 import android.util.Log
+import com.jayway.syssla.facebook.FacebookLoginActivity
 import io.realm.Realm
 import java.security.MessageDigest
 import java.security.NoSuchAlgorithmException
@@ -30,7 +31,7 @@ class SplashActivity: AppCompatActivity() {
 
         Handler().postDelayed({
             kotlin.run {
-                startActivity(Intent(this, MainActivity::class.java))
+                startActivity(Intent(this, FacebookLoginActivity::class.java))
             }
         }, 2000)
     }

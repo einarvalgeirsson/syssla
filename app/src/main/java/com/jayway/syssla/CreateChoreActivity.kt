@@ -9,19 +9,19 @@ import android.view.View
 import android.view.Window
 import com.jayway.syssla.model.Chore
 import com.jayway.syssla.view.Colors
+import com.jayway.syssla.view.NoStatusBarActivity
 import com.vicpin.krealmextensions.save
 import kotlinx.android.synthetic.main.create_chore_layout.*
 import kotlinx.android.synthetic.main.fab_layout.*
 
 
-class CreateChoreActivity: AppCompatActivity() {
+class CreateChoreActivity: NoStatusBarActivity() {
 
     var color: Int? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        removeStatusBar()
         setupTransition()
 
         setContentView(R.layout.create_chore_layout)
@@ -33,15 +33,6 @@ class CreateChoreActivity: AppCompatActivity() {
 
     private fun setBackgroundColor(color: Int?) {
         if (color != null) create_chore_layout.setBackgroundColor(color)
-    }
-
-    private fun removeStatusBar() {
-        // remove title
-        val decorView = window.decorView
-        // Hide the status bar.
-        val uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN
-        decorView.systemUiVisibility = uiOptions
-
     }
 
     private fun setupTransition() {
